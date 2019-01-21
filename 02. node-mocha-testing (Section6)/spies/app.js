@@ -1,0 +1,6 @@
+
+module.exports.handleSignup = (email, password) => {
+  // Check if email already exists
+  db.saveUser({email, password});
+  // Send welcome email
+};
