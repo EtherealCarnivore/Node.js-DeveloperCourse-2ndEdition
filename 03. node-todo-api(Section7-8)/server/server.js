@@ -43,14 +43,17 @@ app.get('/todos', authenticate, (req, res) => {
 });
 
 // REQUEST: GET /todos/id -- dynamic
-app.get('/todos/:id', (req, res) => {
+app.get('/todos/:id', authenticate, (req, res) => {
   var id = req.params.id;
 
     if (!ObjectID.isValid(id)) { //check for valid mongodb ID
       return res.status(404).send(); //send bad request response
     };
 
-    Todo.findById(id).then((todo) => {
+    Todo.findOne({
+        _id: id,
+        _creator: req.user._id
+    }).then((todo) => {
       if (!todo) {
         return res.status(404).send(); //if todo doesn't exist respond with 404
       };
@@ -58,7 +61,7 @@ app.get('/todos/:id', (req, res) => {
     }).catch((e) => res.status(400).send()); //handle error, respond with 400
 });
 
-app.delete('/todos/:id', (req, res) => {
+app.delete('/todos/:id', authenticate, (req, res) => {
   var id = req.params.id;
   //validate ID -> not valid? return 404
 
@@ -66,7 +69,10 @@ app.delete('/todos/:id', (req, res) => {
     return res.status(404).send();
   }
 
-  Todo.findByIdAndRemove(id).then((todo) => {
+  Todo.findOneAndRemove({
+      _id: id,
+      _creator: req.user._id
+  }).then((todo) => {
     if (!todo){ // no todo found
       return res.status(404).send();
     };
@@ -78,7 +84,7 @@ app.delete('/todos/:id', (req, res) => {
 
  // HTTP PATCH route
 
- app.patch('/todos/:id', (req,res) => {
+ app.patch('/todos/:id', authenticate, (req,res) => {
    var id = req.params.id; //get objectID from request
    var body = _.pick(req.body, ['text', 'completed']); //pull off specific properties -- we dont want users updating others or adding new ones not specified in the mongo model
 
@@ -93,7 +99,7 @@ app.delete('/todos/:id', (req, res) => {
      body.completedAt = null; //remove timestamp
    }
 
-   Todo.findByIdAndUpdate(id, {$set:body}, {new: true})
+   Todo.findOneAndUpdate({_id: id, _creator: req.user._id}, {$set:body}, {new: true})
    .then((todo) => {
      if(!todo){ //document not found
        return res.status(404).send(); //respond with 404
