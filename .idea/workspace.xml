@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6459ddbc-0298-4dd0-9565-145c7c582ab9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6459ddbc-0298-4dd0-9565-145c7c582ab9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05. async-await (Section 10)/app-promises.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="55" column="2" lean-forward="true" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+            <state relative-caret-position="-1035">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -53,6 +51,17 @@
             <path>
               <item name="Node.js-DeveloperCourse-2ndEdition" type="b2602c69:ProjectViewProjectNode" />
               <item name="Node.js-DeveloperCourse-2ndEdition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Node.js-DeveloperCourse-2ndEdition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Node.js-DeveloperCourse-2ndEdition" type="462c0819:PsiDirectoryNode" />
+              <item name="03. node-todo-api(Section7-8)" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Node.js-DeveloperCourse-2ndEdition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Node.js-DeveloperCourse-2ndEdition" type="462c0819:PsiDirectoryNode" />
+              <item name="03. node-todo-api(Section7-8)" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -91,15 +100,15 @@
       <workItem from="1548101961406" duration="599000" />
       <workItem from="1548264556544" duration="1809000" />
       <workItem from="1548357120177" duration="69000" />
-      <workItem from="1548357394946" duration="2500000" />
+      <workItem from="1548357394946" duration="4282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4977000" />
+    <option name="totallyTimeSpent" value="6759000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1444" height="902" extended-state="7" />
+    <frame x="-2" y="0" width="1444" height="902" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14396612" />
@@ -125,10 +134,15 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/03. node-todo-api(Section7-8)/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-897" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/05. async-await (Section 10)/app-promises.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="55" column="2" lean-forward="true" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+        <state relative-caret-position="-1035">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
         </state>
       </provider>
     </entry>
