@@ -36,7 +36,7 @@ const getCountries = async (currencyCode) => {
 //  })
 // };
 
-const convertCurreny = async (from, to, amount) => {
+const convertCurrency = async (from, to, amount) => {
     const rate = await getExchangeRate(from, to);
         const convertedAmount = (amount * rate).toFixed(2);
         const countries = await getCountries(to);
@@ -45,7 +45,7 @@ const convertCurreny = async (from, to, amount) => {
 
 };
 
-convertCurreny('USD', 'CAD', 10).then((result) => {
+convertCurrency('BGN', 'GBP', 10).then((result) => {
     console.log(result);
 });
 
